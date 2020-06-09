@@ -1,0 +1,24 @@
+ATIVIDADE - ENGENHARIA DE SOFTWARE 2
+Deploy de aplicação NodeJS - Heroku
+
+Ferramentas utilizadas: docker, DBeaver, Heroku, GitHub, VSCode, Kaffeine
+
+Guia para execução da aplicação:
+*Banco*
+- Baixar um container do postgresql no docker pré-configurado: docker run --name postgres -e POSTGRES_PASSWORD=docker -d -p 5432:5432 postgres
+- Com a ferramenta DBeaver fazer a configuração do banco.
+    - Se no SO Windows, usar o endereço 192.168.99.100
+    - Em qualquer outro SO, usar localhost
+
+*Subir aplicação no Heroku*
+- Clonar essa aplicação;
+- Realocar no repositorio GitHub;
+- Instalar Heroku-CLI
+- Criar um repositorio no Heroku: heroku create "nomeDoRepositorio";
+- Sincronizar a conta do GitHub com a conta do Heroku;
+- Configurar banco no arquivo .env como: tipoBanco://usuario:senha@endereçoDoServidor:porta/database;
+- Para carregar o banco na aplicação: npm run start;
+- Para rodar as migrations: npm run typeorm migration:run;
+- Para subir a aplicação no Heroku: heroku logs --tails;
+- Para o acesso ao servidor configurado na aplicação: heroku run bash;
+- Para rodar as migrations dentro do servidor: npx tipeorm migration:run;
