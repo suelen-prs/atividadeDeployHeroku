@@ -22,3 +22,4 @@ Guia para execução da aplicação:
 - Para subir a aplicação no Heroku: heroku logs --tails;
 - Para o acesso ao servidor configurado na aplicação: heroku run bash;
 - Para rodar as migrations dentro do servidor: npx tipeorm migration:run;
+- Adicionar url gerada no Kaffeine para que a aplicação não fique inativa.
